@@ -322,6 +322,7 @@ h6 {
 .chat_bodys {
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 
 .chat__body {
