@@ -439,6 +439,13 @@
     messageBodys.forEach((el => {
         el.addEventListener("mouseleave", closeMenuAuto);
     }));
+    messageBodys.forEach((el => {
+        el.addEventListener("touchstart", touchEditMenu);
+    }));
+    function touchEditMenu(e) {
+        let optionBody = e.target.closest(".freelancer__message");
+        if (optionBody.children[2].classList.contains("_active")) optionBody.children[2].classList.remove("_active"); else optionBody.children[2].classList.add("_active");
+    }
     function optionMenuOpen(e) {
         let optionBody = e.target.nextElementSibling;
         if (optionBody.classList.contains("_active")) optionBody.classList.remove("_active"); else optionBody.classList.add("_active");
